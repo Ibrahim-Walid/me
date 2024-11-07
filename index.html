@@ -7,6 +7,7 @@
     <title>Ibrahim Walid</title>
     <link rel="icon" href="logo.png" type="image/png">
     <style>
+        /* General Reset and Flexbox for fluidity */
         * {
             margin: 0;
             padding: 0;
@@ -20,40 +21,138 @@
             gap: 1rem;
             background-color: rgba(0, 140, 255, 0.301);
             padding-bottom: 1rem;
-            margin: 1rem;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        transform: scale(0.9); /* Scale everything down when magnifying */
         }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Align Ministry Logo to the right */
+        /* Ministry Logo Styling */
         .ministry {
             position: absolute;
-            right: 2cm;
-            top: 1cm;
-            width: 150px;
-            height: 150px;
+            right: 2rem; /* Adjusted for responsiveness */
+            top: 1rem;
+            width: 12vw; /* Use vw for better responsiveness */
+            height: 12vw;
             border-radius: 50%;
             background-image: url(./ministry-of-education-egypt-text-label-logo-symbol-transparent-png-1381150-removebg-preview.png);
             background-position: center;
             background-size: cover;
+            z-index: 10;
         }
 
-        /* Align Image and Sections to the Left, remove previous centering */
+        /* Adjusted Content Layout */
         .content {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Align content to the left by default */
+            align-items: flex-start;
             width: 100%;
             gap: 1rem;
+            margin-top: 10vw; /* Adjusted spacing to reduce gap above the title */
         }
 
+        /* Title centered with responsive margin */
+        .center {
+            text-align: center;
+            align-self: center;
+            margin-top: 0; /* Removed large gap above the title */
+        }
+
+        /* Flexbox for sections and content */
+        .sections {
+            font-size: 2rem; /* Use rem for better scaling */
+            color: #333;
+            animation: color-change 2s infinite;
+            margin-top: 1rem;
+        }
+
+        @keyframes color-change {
+            0% { color: #333; }
+            50% { color: #ff7e5f; }
+            100% { color: #333; }
+        }
+
+        /* Responsive Design for Mobile Devices */
+        @media (max-width: 768px) {
+            .ministry {
+                width: 15vw; /* Flexible width for the logo */
+                height: 15vw;
+                top: 2rem;
+                right: 1rem;
+            }
+
+            .facebook_icon, .instagram_icon, .Email_icon {
+                width: 6vw; /* Reduced icon size */
+                height: 6vw;
+            }
+
+            img {
+                width: 80%; /* Responsive image width */
+                height: auto;
+            }
+
+            .sections {
+                font-size: 5vw; /* Font size adjusts for smaller screens */
+            }
+
+            .hover li {
+                width: 80%; /* Adjust list item width */
+            }
+
+            .container {
+                width: 100%;
+                max-width: none; /* Prevent max-width from affecting mobile */
+            }
+
+            /* Center the title and content */
+            .center {
+                margin-top: 10vw; /* Adjusted dynamic spacing to avoid overlapping */
+            }
+        }
+
+        /* Smaller Screen Adjustments */
+        @media (max-width: 480px) {
+            .ministry {
+                width: 20vw; /* Logo adjusts according to smaller screens */
+                height: 20vw;
+                top: 1.5rem;
+                right: 1rem;
+            }
+
+            .facebook_icon, .instagram_icon, .Email_icon {
+                width: 8vw; /* Icon size */
+                height: 8vw;
+            }
+
+            img {
+                width: 90%; /* Image adjusts to fit smaller screens */
+                height: auto;
+            }
+
+            .sections {
+                font-size: 6vw; /* Font size adjusts even more */
+            }
+
+            .hover li {
+                width: 90%; /* Make list items more responsive */
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .center {
+                margin-top: 15vw; /* More spacing for small screens */
+            }
+        }
+
+        /* Ensuring no horizontal overflow */
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Social Icons Styling */
         .facebook_icon, .instagram_icon, .Email_icon {
-            width: 70px;
-            height: 70px;
+            width: 6vw; /* Reduced icon size */
+            height: 6vw;
             border-radius: 50%;
             background-position: center;
             background-size: cover;
@@ -68,39 +167,24 @@
         }
 
         .Email_icon {
-            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDyxU0K2Jex5or5LSATjWaNB8oSA6XPsWRRg&s);
+            background-image: url(./Email_icon.png);
         }
 
+        .social-icons {
+            display: flex;
+            gap: 1rem; /* Adds spacing between the icons */
+            justify-content: left; /* Centers the icons horizontally */
+            flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
+        }
+
+        /* Neon Text Styling */
         .neon-text {
             font-size: 36px;
             color: #fff;
             text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
         }
 
-        .sections {
-            font-size: 36px;
-            color: #333;
-            animation: color-change 2s infinite;
-            margin-top: 1cm;
-        }
-
-        @keyframes color-change {
-            0% { color: #333; }
-            50% { color: #ff7e5f; }
-            100% { color: #333; }
-        }
-
-        .text-shadow {
-            font-size: 36px;
-            color: #333;
-            text-shadow: 2px 2px 4px #aaa;
-        }
-
-        .hover {
-            list-style: none;
-            padding: 0;
-        }
-
+        /* Hover effects on list items */
         .hover li {
             width: 250px;
             padding: 10px 30px; /* Adjust padding to make the rectangle smaller */
@@ -115,84 +199,69 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* Image styling */
         img, video {
             max-width: 100%;
             height: auto;
         }
 
-        /* Centering class */
-        .center {
-            text-align: center;
-            align-self: center;
+        /* Remove bullet points from the list */
+        ul {
+            list-style-type: none; /* Removes default bullets */
+            padding-left: 0; /* Removes left padding */
         }
 
-        @media (max-width: 768px) {
-            .ministry {
-                width: 120px;
-                height: 120px;
-                top: 2cm;
-                right: 1cm;
-            }
-
-            .facebook_icon, .instagram_icon, .Email_icon {
-                width: 50px;
-                height: 50px;
-            }
-
-            img {
-                width: 100%;
-                height: auto;
-            }
-
-            .sections {
-                font-size: 2rem;
-            }
-
-            .hover li {
-                width: 200px;
-            }
-
-            .container {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .ministry {
-                width: 100px;
-                height: 100px;
-                top: 1.5cm;
-                right: 1cm;
-            }
-
-            .facebook_icon, .instagram_icon, .Email_icon {
-                width: 40px;
-                height: 40px;
-            }
-
-            img {
-                width: 80%;
-            }
-
-            .sections {
-                font-size: 24px;
-            }
-
-            .hover li {
-                width: 150px;
-            }
-
-            .container {
-                width: 100%;
-            }
-        }
-
-        .social-icons {
+        /* Success Image Size Adjustment */
+        .success-img-wrapper {
             display: flex;
-            gap: 1rem; /* Adds spacing between the icons */
-            justify-content: left; /* Centers the icons horizontally */
-            flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
-            margin-bottom: 1cm;
+            justify-content: flex-end; /* Align the image to the right */
+            width: 100%; /* Ensure that the wrapper takes up the full width */
+        }
+
+        .success-img {
+            width: 10cm; /* Set a more appropriate width for the image */
+            height: auto;
+            border-radius: 10px;
+            margin-right: 1px; /* Margin between the image and the page edge */
+        }
+
+        /* Success Image Responsiveness */
+        @media (max-width: 768px) {
+            .success-img {
+                width: 35vw; /* Make the image responsive on smaller screens */
+                margin-right: 10px; /* Adjust margin for smaller screens */
+            }
+        }
+
+        /* Container for List and Image */
+        .list-image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        /* Ensure both image and list are inline and aligned */
+        .list-container {
+            width: 50%; /* Make the list take up half the width */
+        }
+
+        .image-container {
+            width: 50%; /* Make the image container take up half the width */
+            display: flex;
+            justify-content: flex-end; /* Align the image to the right */
+        }
+
+        /* Image of Ibrahim Walid */
+        .ibrahim-image {
+            width: 30vw; /* Increase image size to be responsive */
+            height: 30vw; /* Keep image aspect ratio */
+            border-radius: 50%; /* Make the image round */
+            object-fit: cover; /* Ensure the image fills the circle */
+            margin-bottom: 10px; /* Space below the image */
+            max-width: 500px; /* Prevent image from getting too large */
+            max-height: 500px; /* Prevent image from getting too large */
         }
     </style>
 </head>
@@ -200,35 +269,36 @@
     <div class="ministry"></div>
 
     <div class="content">
-        <!-- Center this title -->
         <h1 class="center" style="font-size: 36pt; color: #333; text-shadow: 2px 2px 4px #aaa; font-family: 'Courier New', Courier, monospace;">PERSONAL INFORMATION</h1>
-
-        <!-- Center this name -->
+        <!-- Add the Image of Ibrahim Walid -->
         <div class="neon-text" style="font-family: Georgia, 'Times New Roman', Times, serif;">Ibrahim Walid</div>
-        <img style="width: 7cm;" src="./Ibrahim Walid.jpg" alt="my image">
-        
-        <!-- Don't center the About Me section -->
-        <div class="sections">About me:</div><br>
-        <p style="font-size: 28px;">Hello! My name is Ibrahim, and I am a 17-year-old student currently in grade 11 at the STEM High School for Boys in 6th of October City, Egypt. I have a deep passion for physics and an insatiable curiosity for learning. My academic journey is driven by a dream to study at the Massachusetts Institute of Technology (MIT) in the USA, where I aspire to delve deeper into the mysteries of the universe and eventually become a physics professor. I am dedicated to my studies, often spending hours in the lab conducting experiments and exploring new concepts. Outside of academics, I enjoy participating in science fairs and competitions, where I have won several awards for my innovative projects. My goal is to contribute to the field of physics through research and teaching, inspiring the next generation of scientists.</p><br>
+        <div class="center">
+            <img class="ibrahim-image" src="./Ibrahim Walid.jpg" alt="Ibrahim Walid">
+        </div>
+        <div class="sections">About:</div>
+        <p style="font-size: 28px;">Hello! My name is Ibrahim, and I am a 17-year-old student currently in grade 11 at the STEM High School for Boys in 6th of October City, Egypt. I have a deep passion for physics and an insatiable curiosity for learning. My academic journey is driven by a dream to study at the Massachusetts Institute of Technology (MIT) in the USA, where I aspire to delve deeper into the mysteries of the universe and eventually become a physics professor. I am dedicated to my studies, often spending hours in the lab conducting experiments and exploring new concepts. Outside of academics, I enjoy participating in science fairs and competitions, where I have won several awards for my innovative projects. My goal is to contribute to the field of physics through research and teaching, inspiring the next generation of scientists.</p>
 
-        <!-- Center Achievements section -->
         <div class="sections">Achievements:</div>
-        <div style="display: flex; align-items: flex-start;">
-            <ul style="max-width: 1000px; margin-right: 80px;" class="hover">
-                <li><center>Bronze medal in kangaroo math</center></li>
-                <li><center>The first rank among the governorate in the third prep stage</center></li>
-                <li><center>The full mark in TOFAS math</center></li>
-            </ul>
-            <img style="border-radius: 50px; width: 50cm; height: 7cm;" src="./success.jpg">
-        </div><br>
+        <div class="list-image-container">
+            <div class="list-container">
+                <ul class="hover">
+                    <li>Bronze medal in Kangaroo Math</li>
+                    <li>Ranked first in the governorate in the third prep stage</li>
+                    <li>Full mark in TOFAS Math</li>
+                </ul>
+            </div>
+            <div class="image-container">
+                <img class="success-img" src="./success.jpg" alt="Success Image">
+            </div>
+        </div>
 
-        <!-- Don't center the Contact Me section -->
-        <div class="sections">Contact me:</div><br>
-        <div style="display: flex; gap: 1cm; margin-bottom: 1cm;" class="social-icons">
-            <a href="https://www.facebook.com/ibrahim.mosa.967/" title="Go to my facebook avccount" target="_blank">
+        <!-- Contact Me Section -->
+        <div class="sections">Contact me:</div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ibrahim.mosa.967/" title="Go to my Facebook account" target="_blank">
                 <div class="facebook_icon"></div>
             </a>
-            <a href="https://www.instagram.com/ibrahimwalid725?igsh=aWdiYTkzcHI5NHhq" title="Go to my instagram account" target="_blank">
+            <a href="https://www.instagram.com/ibrahimwalid725?igsh=aWdiYTkzcHI5NHhq" title="Go to my Instagram account" target="_blank">
                 <div class="instagram_icon"></div>
             </a>
             <a href="mailto:ibrahimmosa085@gmail.com" title="Email me">
