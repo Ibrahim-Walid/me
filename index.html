@@ -3,71 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="This website represents the information about me, Ibrahim Walid. It may be considered my portfolio">
-    <!-- The meta discribtion gives the words below the link in the browser -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Walid</title>
     <link rel="icon" href="logo.png" type="image/png">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background-color: rgba(0, 140, 255, 0.301);
+            padding-bottom: 1rem;
+            margin: 1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Align Ministry Logo to the right */
         .ministry {
+            position: absolute;
+            right: 2cm;
+            top: 1cm;
             width: 150px;
             height: 150px;
             border-radius: 50%;
             background-image: url(./ministry-of-education-egypt-text-label-logo-symbol-transparent-png-1381150-removebg-preview.png);
             background-position: center;
             background-size: cover;
-            position: absolute; /* Positions it absolutely relative to the nearest positioned ancestor */
-            top: 4cm; /* Aligns it with the top edge */
-            right: 2cm; /* Aligns it with the right edge */
         }
+
+        /* Align Image and Sections to the Left, remove previous centering */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align content to the left by default */
+            width: 100%;
+            gap: 1rem;
+        }
+
+        .facebook_icon, .instagram_icon, .Email_icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+        }
+
         .facebook_icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
             background-image: url(./facebook.png);
-            background-position: center;
-            background-size: cover;
-            display:inline-block;
         }
+
         .instagram_icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
             background-image: url(./Instagram.jpeg);
-            background-position: center;
-            background-size: cover;
-            display:inline-block;            
         }
-        .Email_icon{
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
+
+        .Email_icon {
             background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDyxU0K2Jex5or5LSATjWaNB8oSA6XPsWRRg&s);
-            background-position: center;
-            background-size: cover;
-            display:inline-block;
         }
-        .sections {
-            font-size: 36px;
-            color: #333;
-            animation: color-change 2s infinite;
-            position: relative;
-            margin-top: 1cm;
-        }
-        @keyframes color-change {
-            0% { color: #333; }
-            50% { color: #ff7e5f; }
-            100% { color: #333; }
-        }
+
         .neon-text {
             font-size: 36px;
             color: #fff;
             text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
         }
+
+        .sections {
+            font-size: 36px;
+            color: #333;
+            animation: color-change 2s infinite;
+            margin-top: 1cm;
+        }
+
+        @keyframes color-change {
+            0% { color: #333; }
+            50% { color: #ff7e5f; }
+            100% { color: #333; }
+        }
+
         .text-shadow {
             font-size: 36px;
             color: #333;
             text-shadow: 2px 2px 4px #aaa;
         }
+
         .hover {
             list-style: none;
             padding: 0;
@@ -86,57 +114,127 @@
             background: #d1e7dd;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: left;
-      justify-content: center;
-      margin-left: 1cm;
-      margin-right: 1cm;
-      padding-bottom: 1cm;
-      margin-top: 1cm;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    img, video {
-      max-width: 100%;
-      height: auto;
-    }
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Centering class */
+        .center {
+            text-align: center;
+            align-self: center;
+        }
+
+        @media (max-width: 768px) {
+            .ministry {
+                width: 120px;
+                height: 120px;
+                top: 2cm;
+                right: 1cm;
+            }
+
+            .facebook_icon, .instagram_icon, .Email_icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .sections {
+                font-size: 2rem;
+            }
+
+            .hover li {
+                width: 200px;
+            }
+
+            .container {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ministry {
+                width: 100px;
+                height: 100px;
+                top: 1.5cm;
+                right: 1cm;
+            }
+
+            .facebook_icon, .instagram_icon, .Email_icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            img {
+                width: 80%;
+            }
+
+            .sections {
+                font-size: 24px;
+            }
+
+            .hover li {
+                width: 150px;
+            }
+
+            .container {
+                width: 100%;
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem; /* Adds spacing between the icons */
+            justify-content: left; /* Centers the icons horizontally */
+            flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
+            margin-bottom: 1cm;
+        }
     </style>
 </head>
-<body style=" background-color: rgba(0, 140, 255, 0.301);">
-    <center><h1 style= " font-size: 36pt; color: #333; text-shadow: 2px 2px 4px #aaa; font-family:'Courier New', Courier, monospace;">PERSONAL INFORMATION</h1></center>
+<body>
     <div class="ministry"></div>
-    <div style="font-family:Georgia, 'Times New Roman', Times, serif; position: relative;" class="neon-text">Ibrahim Walid</div>
-    <img style="width: 7cm;" src="./Ibrahim Walid.jpg" alt="my image">
-    <div class="sections">About me:</div><br>
-    <p style="font-size: 28px;">Hello! My name is Ibrahim, and I am a 17-year-old student currently in grade 11 at the STEM High School for Boys in 6th of October City, Egypt. I have a deep passion for physics and an insatiable curiosity for learning. My academic journey is driven by a dream to study at the Massachusetts Institute of Technology (MIT) in the USA, where I aspire to delve deeper into the mysteries of the universe and eventually become a physics professor. I am dedicated to my studies, often spending hours in the lab conducting experiments and exploring new concepts. Outside of academics, I enjoy participating in science fairs and competitions, where I have won several awards for my innovative projects. My goal is to contribute to the field of physics through research and teaching, inspiring the next generation of scientists.</p><br>
-    <div class="sections">Achievements:</div>
-    <div style="display: flex; align-items: flex-start;">
-        <ul style="max-width: 1000px; margin-right: 80px;" class="hover">
-            <li><center>Bronze medal in kangaroo math</center></li>
-            <li><center>The first rank among the governorate in the third prep stage</center></li>
-            <li><center>The full mark in TOFAS math</center></li>
-        </ul>
-        <img style="border-radius: 50px; width: 50cm; height: 7cm;" src="./success.jpg">
-    </div><br>
-    <div class="sections">Contact me:</div><br>
-    <div style="display: flex; gap: 1cm; margin-bottom: 1cm;">
-        <a href="https://www.facebook.com/ibrahim.mosa.967/" title="Go to my facebook avccount" target="_blank"><div class="facebook_icon"></div></a>
-        <a href="https://www.instagram.com/ibrahimwalid725?igsh=aWdiYTkzcHI5NHhq" title="Go to my instagram account" target="_blank"><div class="instagram_icon"></div></a>
-        <!-- The title give the text that is shown in the box while being on the link without clicking on it -->
-        <!-- This target makes the link open in new tab not the same tab -->
-        <a href="mailto:ibrahimmosa085@gmail.com" title="Email me"><div class="Email_icon"></div></a>
+
+    <div class="content">
+        <!-- Center this title -->
+        <h1 class="center" style="font-size: 36pt; color: #333; text-shadow: 2px 2px 4px #aaa; font-family: 'Courier New', Courier, monospace;">PERSONAL INFORMATION</h1>
+
+        <!-- Center this name -->
+        <div class="neon-text" style="font-family: Georgia, 'Times New Roman', Times, serif;">Ibrahim Walid</div>
+        <img style="width: 7cm;" src="./Ibrahim Walid.jpg" alt="my image">
+        
+        <!-- Don't center the About Me section -->
+        <div class="sections">About me:</div><br>
+        <p style="font-size: 28px;">Hello! My name is Ibrahim, and I am a 17-year-old student currently in grade 11 at the STEM High School for Boys in 6th of October City, Egypt. I have a deep passion for physics and an insatiable curiosity for learning. My academic journey is driven by a dream to study at the Massachusetts Institute of Technology (MIT) in the USA, where I aspire to delve deeper into the mysteries of the universe and eventually become a physics professor. I am dedicated to my studies, often spending hours in the lab conducting experiments and exploring new concepts. Outside of academics, I enjoy participating in science fairs and competitions, where I have won several awards for my innovative projects. My goal is to contribute to the field of physics through research and teaching, inspiring the next generation of scientists.</p><br>
+
+        <!-- Center Achievements section -->
+        <div class="sections">Achievements:</div>
+        <div style="display: flex; align-items: flex-start;">
+            <ul style="max-width: 1000px; margin-right: 80px;" class="hover">
+                <li><center>Bronze medal in kangaroo math</center></li>
+                <li><center>The first rank among the governorate in the third prep stage</center></li>
+                <li><center>The full mark in TOFAS math</center></li>
+            </ul>
+            <img style="border-radius: 50px; width: 50cm; height: 7cm;" src="./success.jpg">
+        </div><br>
+
+        <!-- Don't center the Contact Me section -->
+        <div class="sections">Contact me:</div><br>
+        <div style="display: flex; gap: 1cm; margin-bottom: 1cm;" class="social-icons">
+            <a href="https://www.facebook.com/ibrahim.mosa.967/" title="Go to my facebook avccount" target="_blank">
+                <div class="facebook_icon"></div>
+            </a>
+            <a href="https://www.instagram.com/ibrahimwalid725?igsh=aWdiYTkzcHI5NHhq" title="Go to my instagram account" target="_blank">
+                <div class="instagram_icon"></div>
+            </a>
+            <a href="mailto:ibrahimmosa085@gmail.com" title="Email me">
+                <div class="Email_icon"></div>
+            </a>
+        </div>
     </div>
 </body>
 </html>
