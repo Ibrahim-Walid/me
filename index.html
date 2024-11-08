@@ -5,7 +5,7 @@
     <meta name="description" content="This website represents the information about me, Ibrahim Walid. It may be considered my portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Walid</title>
-    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="icon" href="./original.png" style="border-radius: 50%;" type="image/png">
     <style>
         /* General Reset and Flexbox for fluidity */
         * {
@@ -29,11 +29,23 @@
         .ministry {
             position: absolute;
             right: 2rem; /* Adjusted for responsiveness */
-            top: 1rem;
+            top: 0rem;
             width: 12vw; /* Use vw for better responsiveness */
             height: 12vw;
             border-radius: 50%;
             background-image: url(./ministry-of-education-egypt-text-label-logo-symbol-transparent-png-1381150-removebg-preview.png);
+            background-position: center;
+            background-size: cover;
+            z-index: 10;
+        }
+        .logo{
+            position: absolute;
+            left: 2rem; /* Adjusted for responsiveness */
+            top: 0rem;
+            width: 12vw; /* Use vw for better responsiveness */
+            height: 12vw;
+            border-radius: 30%;
+            background-image: url(./logo.png);
             background-position: center;
             background-size: cover;
             z-index: 10;
@@ -209,6 +221,7 @@
         ul {
             list-style-type: none; /* Removes default bullets */
             padding-left: 0; /* Removes left padding */
+            text-align: center;
         }
 
         /* Success Image Size Adjustment */
@@ -263,15 +276,31 @@
             max-width: 500px; /* Prevent image from getting too large */
             max-height: 500px; /* Prevent image from getting too large */
         }
+        @font-face {
+            font-family: 'Photograph Signature';
+            src: url('Photograph Signature.ttf') format('ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .signature {
+            font-family: 'Photograph Signature', cursive;
+            font-size: 3em; /* Adjust size as needed */
+            background: linear-gradient(to right, purple, darkorange);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body>
     <div class="ministry"></div>
+    <div class="logo"></div>
+
 
     <div class="content">
         <h1 class="center" style="font-size: 36pt; color: #333; text-shadow: 2px 2px 4px #aaa; font-family: 'Courier New', Courier, monospace;">PERSONAL INFORMATION</h1>
         <!-- Add the Image of Ibrahim Walid -->
-        <div class="neon-text" style="font-family: Georgia, 'Times New Roman', Times, serif;">Ibrahim Walid</div>
+        <div class="signature">Ibrahim Walid</div>
         <div class="center">
             <img class="ibrahim-image" src="./Ibrahim Walid.jpg" alt="Ibrahim Walid">
         </div>
