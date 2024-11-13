@@ -61,6 +61,7 @@
             justify-content: center;
             gap: 1rem;
             margin-top: 0.5rem;
+            flex-wrap: wrap; /* Ensure the links stay side by side on smaller screens */
         }
 
         nav a {
@@ -162,10 +163,6 @@
                 font-size: 1.5rem;
             }
 
-            nav {
-                flex-direction: column;
-            }
-
             nav a {
                 font-size: 0.9rem;
                 padding: 0.4rem;
@@ -187,6 +184,7 @@
             .social-icons a {
                 width: 40px;
                 height: 40px;
+                border-radius: 50%; /* Ensure the icons are perfectly circular on mobile as well */
             }
 
             .profile-image {
