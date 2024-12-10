@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Walid</title>
+    <link rel="icon" href="./logo.png" style="border-radius: 50%;" type="image/png">
+    <style>
+        /* Same global styles as the home page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-size: 400% 400%;
+            color: #fff;
+            animation: gradientFlow 15s ease infinite;
+        }
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        header {
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: rgba(15, 32, 39, 0.9);
+            color: #ffda79;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: padding 0.3s, background-color 0.3s;
+        }
+        header.shrink {
+            padding: 0.5rem 0;
+            background-color: rgba(15, 32, 39, 0.8);
+        }
+        header h1 {
+            font-size: 2rem;
+            transition: font-size 0.3s;
+        }
+        header.shrink h1 {
+            font-size: 1.5rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #ffda79;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            padding-top: 6rem;
+        }
+        .projects-header {
+            text-align: justify;
+            margin: 2rem 0;
+            background: rgba(27, 40, 56, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            line-height: 1.6rem;
+        }
+        .projects-header h1 {
+            font-size: 2.5rem;
+            color: #ffda79;
+        }
+        .projects-header p {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+        .gradient-separator {
+            height: 4px;
+            background: linear-gradient(to right, #ffda79, #ffcc33, #ffda79);
+            margin: 2rem 0;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .project-box {
+            flex: 1 1 calc(48% - 2rem); /* Take up almost half the width */
+            background: #1b2838;
+            padding: 2rem; /* Increased padding for a larger box */
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        .project-box img {
+            width: 100%;
+            height: 200px; /* Increased image height */
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .project-box h2 {
+            margin: 1rem 0;
+            font-size: 1.8rem; /* Slightly larger font */
+            color: #ffda79;
+        }
+        .project-box p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            line-height: 1.6rem;
+        }
+        .project-box .btn {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background-color: #ffda79;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .project-box .btn:hover {
+            background-color: #ffcc33;
+        }
+        .project-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+        .project-box:before {
+            content: "Featured Project";
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffda79;
+            color: #000;
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .projects-container {
+                flex-direction: column;
+            }
+            .project-box {
+                flex: 1 1 100%;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #0f2027;
+            color: #ffda79;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Ibrahim Walid</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="projects-header">
+            <h1>Capstone Projects</h1>
+            <p style="text-indent: 2rem;">Egypt faces several difficulties that hinder its development. These are known as Egypt's Grand Challenges, and they total 11. As part of Vision 2030, Egypt aims to address and solve these challenges by the year 2030. Through Capstone projects, students try to solve parts of these challenges, which in the long term will result in significant improvements.</p>
+            <p style="text-indent: 2rem;">To complete the project, students must follow specific steps in sequence to achieve one unified process. This process is called the <a style="color: #ffcc33;" target="_blank" href="https://en.wikipedia.org/wiki/Engineering_design_process">Engineering Design Process</a> (EDP). Throughout their school journey, students complete five projects: one each semester in grades 10 and 11, and one during the first half of grade 12. While doing the project, the students write down all that they have done in a book-like portfolio. They also write a poster that illustrates the entire project, including the materials used, the steps they followed to build the project, the results they found, the scientific basis beneath all the project's aspects, and some recommendations for future improvement. They also build a prototype that simulates the real-life solution on a smaller scale. All the projects in the school, for the same class, are evaluated on one day by professors, where each team is evaluated separately and discusses their own project individually. Teams consist of five members in grade 10, four members in grade 11, and three members in grade 12.</p>
+            <p style="text-indent: 2rem;">The main aim of these projects is to make the students acquire some important values, with teamwork being the most important of them. Since STEM schools are boarding schools, students live and work together day and night. This environment teaches them independence, responsibility, teamwork, and other essential life skills. Additionally, conducting research is one of the most important skills gained through the Capstone projects, which allows students to build many projects, beyond Capstone ones, and innovate. Through these projects, many STEM students (A.K.A. STEMers) participate in debates and competitions with international students, showcasing their projects and research in various important fields.</p>
+        </section>
+
+        <div class="gradient-separator"></div>
+
+        <section class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-box">
+                <img src="./cap/102/102.jpg" alt="Project 1">
+                <h2>Hydro-Guard</h2>
+                <p>A gravity dam prototype was constructed using recycled materials to manage rainwater floods in Qena Valley. Successfully, it withstood 60 liters of water pressure and a 10 kg load at its top-center. This cost-effective, eco-friendly solution offers flood mitigation while maximizing water storage for beneficial uses like irrigation.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-box">
+                <img src="./cap/101/10101.jpg" alt="Project 2">
+                <h2>Glowing Wind</h2>
+                <p>A Savonius wind turbine was built using recycled materials to power nighttime lighting at STEM October School. By generating 441 joules in 5 minutes with 17% efficiency, it offers a cost-effective, eco-friendly alternative to non-renewable energy sources.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-box">
+                <img src="assets/images/project3.jpg" alt="Project 3">
+                <h2>Aero-pure Tires</h2>
+                <p>This project tackles nitrogen dioxide emissions from fertilizer overuse in Al-Mena Safour by producing activated carbon from waste tires. The constructed air filter reduced NO<sub>2</sub> concentrations by 80.81% in 8 minutes. Cost-effective and eco-friendly, it offers a sustainable solution to air pollution and climate challenges.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ibrahim Walid. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Header shrink effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+    </script>
+</body>
+</html>
