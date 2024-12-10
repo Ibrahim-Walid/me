@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Ibrahim Walid</title>
+    <title>Ibrahim Walid</title>
     <link rel="icon" href="./logo.png" style="border-radius: 50%;" type="image/png">
     <style>
         /* Global styles */
@@ -35,13 +35,16 @@
             z-index: 1000;
             transition: padding 0.3s, background-color 0.3s;
         }
+        header.shrink {
+            padding: 0.5rem 0;
+            background-color: rgba(15, 32, 39, 0.8);
+        }
         header h1 {
             font-size: 2rem;
             transition: font-size 0.3s;
         }
-        header.shrink {
-            padding: 0.5rem 0;
-            background-color: rgba(15, 32, 39, 0.8);
+        header.shrink h1 {
+            font-size: 1.5rem;
         }
         nav {
             display: flex;
@@ -87,7 +90,6 @@
             color: #ddd;
             text-indent: 2rem;
             line-height: 1.6;
-            text-align: justify;
         }
 
         .research-container {
@@ -188,56 +190,36 @@
         }
 
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1rem; /* Slightly larger than before for mobile */
-                line-height: 1.5rem; /* Match About Me section */
+            .container {
+                width: 90%;
             }
-
-            .research-header h1 {
-                font-size: 1rem; /* Slightly larger for mobile */
-                line-height: 1.5rem;
-            }
-
-            .research-header p {
-                font-size: 1rem; /* Match About Me section */
-                line-height: 1.5rem;
-            }
-
             .research-box {
                 flex: 1 1 100%;
                 flex-direction: column;
                 text-align: center;
-                padding: 1.5rem; /* Adjust padding for better appearance */
             }
-
             .research-box img {
                 width: 100%;
                 max-width: none;
                 height: auto;
                 margin-bottom: 1rem;
             }
-
             .research-details {
                 text-align: center;
             }
-
             .research-actions {
                 flex-direction: column;
             }
-
             .research-box h2 {
-                font-size: 1.2rem; /* Slightly larger for readability */
+                font-size: 1.5rem;
             }
-
             .research-box p {
-                font-size: 1rem;
-                line-height: 1.5rem;
+                font-size: 0.9rem;
+                line-height: 1.4rem;
             }
-
             .research-box .program-badge {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
-
             .research-box .btn {
                 align-self: center;
             }
@@ -265,9 +247,9 @@
     <div class="container">
         <section class="research-header">
             <h1>Research Projects</h1>
-            <p>Research is the foundation of learning and progress. Every new invention we see today stands on the shoulders of countless previous research studies. Through research, scientists uncover new truths about the world every day, pushing the boundaries of human knowledge. My aspiration is to contribute to this process and leave my own footprint in this ever-growing field.</p>
-            <p>Physics, in particular, fascinates me as it serves as the universal language to explain the world. From the smallest particles, like quarks and atoms, to the largest galaxies, physics provides the rules that govern everything. My interest lies in quantum physics, a field that delves into the mysterious and often counterintuitive nature of the microscopic world. The theories of superposition and Schrödinger’s uncertainty principle amaze me, as they challenge our understanding of reality and showcase the extraordinary complexity of nature.</p>
-            <p>We live in an era defined by technology. The device you are using to read this essay is proof of how deeply technology has transformed our lives. Recognizing this, I’ve begun learning computational physics to merge my passion for physics with modern tools. My hope is to continue growing, learning, and contributing to this exciting field, achieving my dreams along the way.</p>
+            <p style="text-align: justify;">Research is the foundation of learning and progress. Every new invention we see today stands on the shoulders of countless previous research studies. Through research, scientists uncover new truths about the world every day, pushing the boundaries of human knowledge. My aspiration is to contribute to this process and leave my own footprint in this ever-growing field.</p>
+            <p style="text-align: justify;">Physics, in particular, fascinates me as it serves as the universal language to explain the world. From the smallest particles, like quarks and atoms, to the largest galaxies, physics provides the rules that govern everything. My interest lies in quantum physics, a field that delves into the mysterious and often counterintuitive nature of the microscopic world. The theories of superposition and Schrödinger’s uncertainty principle amaze me, as they challenge our understanding of reality and showcase the extraordinary complexity of nature.</p>
+            <p style="text-align: justify;">We live in an era defined by technology. The device you are using to read this essay is proof of how deeply technology has transformed our lives. Recognizing this, I’ve begun learning computational physics to merge my passion for physics with modern tools. My hope is to continue growing, learning, and contributing to this exciting field, achieving my dreams along the way.</p>
         </section>
 
         <div class="gradient-separator"></div>
@@ -278,7 +260,7 @@
                 <div class="research-details">
                     <h2>Lumiere Research Program</h2>
                     <span class="paper-title">Effects of Argon Ion Bombardment on Amorphous Silicon and Copper Indium Gallium Diselenide Solar Cells</span>
-                    <p>A simulation was conducted using SRIM/TRIM software to study the sputtering yield of Amorphous Silicon (a-Si) and Copper Indium Gallium Di-Selenide (CIGS) solar cells when exposed to argon ions. This research aimed to evaluate how ion energy, incidence angle, and material structure affect solar cell performance and durability. Findings will help optimize solar cell efficiency for various environmental conditions, offering cost-effective and energy-efficient solutions.</p>
+                    <p style="text-align: justify;">A simulation was conducted using SRIM/TRIM software to study the sputtering yield of Amorphous Silicon (a-Si) and Copper Indium Gallium Di-Selenide (CIGS) solar cells when exposed to argon ions. This research aimed to evaluate how ion energy, incidence angle, and material structure affect solar cell performance and durability. Findings will help optimize solar cell efficiency for various environmental conditions, offering cost-effective and energy-efficient solutions. Although the simulation highlights valuable insights, it faces limitations in studying complex environmental factors and advanced solar cell types, such as organic and quantum cells, due to technological constraints.</p>
                     <div class="research-actions">
                         <a href="#" class="btn">Learn More</a>
                     </div>
