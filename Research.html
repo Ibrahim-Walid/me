@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Ibrahim Walid</title>
+    <link rel="icon" href="./logo.png" style="border-radius: 50%;" type="image/png">
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-size: 400% 400%;
+            color: #fff;
+            animation: gradientFlow 15s ease infinite;
+        }
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        header {
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: rgba(15, 32, 39, 0.9);
+            color: #ffda79;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: padding 0.3s, background-color 0.3s;
+        }
+        header.shrink {
+            padding: 0.5rem 0;
+            background-color: rgba(15, 32, 39, 0.8);
+        }
+        header h1 {
+            font-size: 2rem;
+            transition: font-size 0.3s;
+        }
+        header.shrink h1 {
+            font-size: 1.5rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #ffda79;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            padding-top: 6rem;
+        }
+
+        .research-header {
+            text-align: center;
+            margin: 2rem 0;
+            background: rgba(27, 40, 56, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .research-header h1 {
+            font-size: 2.5rem;
+            color: #ffda79;
+        }
+
+        .research-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            text-indent: 2rem;
+            line-height: 1.6;
+        }
+
+        .research-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .research-box {
+            flex: 1 1 calc(48% - 2rem);
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 2rem;
+            padding: 2rem;
+            background: #1b2838;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .research-box img {
+            max-width: 250px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .research-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .research-box h2 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: #ffda79;
+        }
+
+        .research-box .paper-title {
+            font-size: 1.2rem;
+            color: #ffcc33;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .research-box p {
+            font-size: 1.1rem;
+            color: #ccc;
+            line-height: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .research-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto;
+        }
+        .gradient-separator {
+            height: 4px;
+            background: linear-gradient(to right, #ffda79, #ffcc33, #ffda79);
+            margin: 2rem 0;
+        }
+
+        .research-box .program-badge {
+            display: inline-block;
+            background-color: #ffda79;
+            color: #000;
+            font-weight: bold;
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            margin: 0;
+        }
+
+        .research-box .btn {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background-color: #ffda79;
+            color: #000;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .research-box .btn:hover {
+            background-color: #ffcc33;
+        }
+
+        .research-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            .research-box {
+                flex: 1 1 100%;
+                flex-direction: column;
+                text-align: center;
+            }
+            .research-box img {
+                width: 100%;
+                max-width: none;
+                height: auto;
+                margin-bottom: 1rem;
+            }
+            .research-details {
+                text-align: center;
+            }
+            .research-actions {
+                flex-direction: column;
+            }
+            .research-box h2 {
+                font-size: 1.5rem;
+            }
+            .research-box p {
+                font-size: 0.9rem;
+                line-height: 1.4rem;
+            }
+            .research-box .program-badge {
+                font-size: 0.9rem;
+            }
+            .research-box .btn {
+                align-self: center;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #0f2027;
+            color: #ffda79;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Ibrahim Walid</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="research.html" class="active">Research</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="research-header">
+            <h1>Research Projects</h1>
+            <p>Research is a cornerstone of innovation and problem-solving. Below is a highlight of one of my research projects, showcasing my dedication to addressing real-world challenges through inquiry and experimentation.</p>
+        </section>
+
+        <div class="gradient-separator"></div>
+
+        <section class="research-container">
+            <div class="research-box">
+                <img src="./Lumiere.png" alt="Research Project Image">
+                <div class="research-details">
+                    <h2>Lumiere Research Program</h2>
+                    <span class="paper-title">Effects of Argon Ion Bombardment on Amorphous Silicon and Copper Indium Gallium Diselenide Solar Cells</span>
+                    <p style="text-align: justify;">A simulation was conducted using SRIM/TRIM software to study the sputtering yield of Amorphous Silicon (a-Si) and Copper Indium Gallium Di-Selenide (CIGS) solar cells when exposed to argon ions. This research aimed to evaluate how ion energy, incidence angle, and material structure affect solar cell performance and durability. Findings will help optimize solar cell efficiency for various environmental conditions, offering cost-effective and energy-efficient solutions. Although the simulation highlights valuable insights, it faces limitations in studying complex environmental factors and advanced solar cell types, such as organic and quantum cells, due to technological constraints.</p>
+                    <div class="research-actions">
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ibrahim Walid. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+    </script>
+</body>
+</html>
