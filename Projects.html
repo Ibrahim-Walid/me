@@ -5,219 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Walid</title>
     <link rel="icon" href="./logo.png" style="border-radius: 50%;" type="image/png">
-    <style>
-        /* Global styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            background-size: 400% 400%;
-            color: #fff;
-            animation: gradientFlow 15s ease infinite;
-        }
-        @keyframes gradientFlow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        header {
-            text-align: center;
-            padding: 1.5rem 0;
-            background-color: rgba(15, 32, 39, 0.9);
-            color: #ffda79;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            transition: padding 0.3s, background-color 0.3s;
-        }
-        header.shrink {
-            padding: 0.5rem 0;
-            background-color: rgba(15, 32, 39, 0.8);
-        }
-        header h1 {
-            font-size: 2rem;
-            transition: font-size 0.3s;
-        }
-        header.shrink h1 {
-            font-size: 1.5rem;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 0.5rem;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: #ffda79;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem;
-            padding: 0.5rem 1rem;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #fff;
-        }
-
-        .container {
-            width: 85%;
-            margin: auto;
-            padding-top: 6rem;
-        }
-
-        .projects-header {
-            text-align: justify;
-            margin: 2rem 0;
-            background: rgba(27, 40, 56, 0.7);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .projects-header h1 {
-            font-size: 2.5rem;
-            color: #ffda79;
-            margin-bottom: 1rem;
-        }
-
-        .projects-header p {
-            font-size: 1.1rem;
-            color: #ddd;
-            text-indent: 2rem;
-            line-height: 1.5;
-        }
-
-        .gradient-separator {
-            height: 4px;
-            background: linear-gradient(to right, #ffda79, #ffcc33, #ffda79);
-            margin: 2rem 0;
-        }
-
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: space-between;
-        }
-
-        .project-box {
-            flex: 1 1 calc(48% - 2rem);
-            background: #1b2838;
-            border-radius: 10px;
-            padding: 2rem;
-            position: relative;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .project-box:before {
-            content: "Featured Project";
-            position: absolute;
-            top: -1rem;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #ffda79;
-            color: #000;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-
-        .project-box img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .project-box h2 {
-            margin: 1rem 0;
-            font-size: 1.8rem;
-            color: #ffda79;
-        }
-
-        .project-box p {
-            font-size: 1.1rem;
-            color: #ccc;
-            text-align: justify;
-            line-height: 1.6rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-box .btn {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background-color: #ffda79;
-            color: #000;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .project-box .btn:hover {
-            background-color: #ffcc33;
-        }
-
-        .project-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-            nav a {
-                padding: 0.5rem;
-            }
-            .projects-header {
-                padding: 1.5rem;
-                margin: 1.5rem 0;
-            }
-            .projects-header h1 {
-                font-size: 2rem;
-                margin-bottom: 1rem;
-            }
-            .projects-header p {
-                font-size: 1rem;
-                line-height: 1.4rem;
-            }
-            .projects-container {
-                flex-direction: column;
-            }
-            .project-box {
-                flex: 1 1 100%;
-                padding: 1.5rem;
-            }
-            .project-box img {
-                height: 150px;
-            }
-            .project-box h2 {
-                font-size: 1.5rem;
-            }
-            .project-box p {
-                font-size: 0.9rem;
-                line-height: 1.4rem;
-            }
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background: #0f2027;
-            color: #ffda79;
-            margin-top: 3rem;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <header id="header">
@@ -233,7 +21,7 @@
         <section class="projects-header">
             <h1>Capstone Projects</h1>
             <p>Egypt faces several difficulties that hinder its development. These are known as Egypt's Grand Challenges, and they total 11. As part of Vision 2030, Egypt aims to address and solve these challenges by the year 2030. Through Capstone projects, students try to solve parts of these challenges, which in the long term will result in significant improvements.</p>
-            <p>To complete the project, students must follow specific steps in sequence to achieve one unified process. This process is called the <a href="https://en.wikipedia.org/wiki/Engineering_design_process" style="color: #ffcc33;" target="_blank">Engineering Design Process</a> (EDP). Throughout their school journey, students complete five projects: one each semester in grades 10 and 11, and one during the first half of grade 12. While doing the project, the students write down all that they have done in a book-like portfolio. They also write a poster that illustrates the entire project, including the materials used, the steps they followed to build the project, the results they found, the scientific basis beneath all the project's aspects, and some recommendations for future improvement. They also build a prototype that simulates the real-life solution on a smaller scale. All the projects in the school, for the same class, are evaluated on one day by professors, where each team is evaluated separately and discusses their own project individually. Teams consist of five members in grade 10, four members in grade 11, and three members in grade 12.</p>
+            <p>To complete the project, students must follow specific steps in sequence to achieve one unified process. This process is called the <a href="https://en.wikipedia.org/wiki/Engineering_design_process" target="_blank">Engineering Design Process</a> (EDP). Throughout their school journey, students complete five projects: one each semester in grades 10 and 11, and one during the first half of grade 12. While doing the project, the students write down all that they have done in a book-like portfolio. They also write a poster that illustrates the entire project, including the materials used, the steps they followed to build the project, the results they found, the scientific basis beneath all the project's aspects, and some recommendations for future improvement. They also build a prototype that simulates the real-life solution on a smaller scale. All the projects in the school, for the same class, are evaluated on one day by professors, where each team is evaluated separately and discusses their own project individually. Teams consist of five members in grade 10, four members in grade 11, and three members in grade 12.</p>
             <p>The main aim of these projects is to make the students acquire some important values, with teamwork being the most important of them. Since STEM schools are boarding schools, students live and work together day and night. This environment teaches them independence, responsibility, teamwork, and other essential life skills. Additionally, conducting research is one of the most important skills gained through the Capstone projects, which allows students to build many projects, beyond Capstone ones, and innovate. Through these projects, many STEM students (A.K.A. STEMers) participate in debates and competitions with international students, showcasing their projects and research in various important fields.</p>
         </section>
 
@@ -250,10 +38,10 @@
                 <img src="./cap/101/10101.jpg" alt="Project 2">
                 <h2>Glowing Wind</h2>
                 <p>A Savonius wind turbine was built using recycled materials to power nighttime lighting at STEM October School. By generating 441 joules in 5 minutes with 17% efficiency, it offers a cost-effective, eco-friendly alternative to non-renewable energy sources.</p>
-                <a href="#" class="btn">Learn More</a>
+                <a href="./cap/101/101.html" class="btn">Learn More</a>
             </div>
             <div class="project-box">
-                <img src="assets/images/project3.jpg" alt="Project 3">
+                <img src="./cap/213/213.jpg" alt="Project 3">
                 <h2>Aero-pure Tires</h2>
                 <p>This project tackles nitrogen dioxide emissions from fertilizer overuse in Al-Mena Safour by producing activated carbon from waste tires. The constructed air filter reduced NO<sub>2</sub> concentrations by 80.81% in 8 minutes. Cost-effective and eco-friendly, it offers a sustainable solution to air pollution and climate challenges.</p>
                 <a href="#" class="btn">Learn More</a>
