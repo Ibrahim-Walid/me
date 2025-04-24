@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Walid</title>
+    <link rel="icon" href="../../logo.png" style="border-radius: 50%;" type="image/png">
+    <link rel="stylesheet" href="../../style.css" type="text/css">
+</head>
+<body>
+    <header id="header">
+        <h1>Ibrahim Walid</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../../Projects.html" class="active">Projects</a>
+            <a href="../../Research.html">Research</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="projects-header">
+            <h1>Tannithea</h1>
+            <p>
+                Egypt faces a growing challenge of water scarcity and improper wastewater disposal, especially in industrial zones like Al-Rubiki, Badr City, which hinders land reclamation efforts. To address this issue, our team developed an automated water treatment system using accessible and sustainable materials to treat tannery wastewater.
+            </p>
+            <p>
+                The prototype featured four key treatment stages: sand filtration, electrocoagulation, biochar adsorption, and UV disinfection. Electrocoagulation was essential for removing dissolved metals, while the biochar stage, wrapped in aluminum foil and refined for better adsorption, effectively targeted industrial dyes and remaining chromium. A UV lamp provided chemical-free disinfection to ensure water safety for agricultural use.
+            </p>
+            <p>
+                All stages were integrated through an Arduino-controlled system with sensors for pH, TDS, temperature, and turbidity. Real-time data was monitored and controlled through a custom-built Android app using Kotlin and Firebase. Testing showed the system reduced TDS by 81.54%, turbidity by 99.08%, and stabilized pH at 7.5, meeting all design requirements. Efficiency trends indicated the prototype could operate for up to 276 cycles.
+            </p>
+            <p>
+                Although we faced early issues with water leakage and sensor interference, these were overcome with careful adjustments and hardware refinements. The project gave us valuable experience in automation, environmental chemistry, and teamwork.
+            </p>
+            <p>In the future, we plan to improve the design by optimizing electrocoagulation parameters, upgrading to magnetic biochar, and refining sand rewash techniques. This project demonstrates how eco-friendly engineering can transform industrial wastewater into a resource for sustainable agriculture and environmental restoration in arid regions.            </p>
+        </section>
+
+        <section class="projects-header">
+            <h1>Team Members</h1>
+            <section class="member-container">
+                <div class="member-box2">
+                    <img src="../../me.jpg" alt="Ibrahim Walid">
+                    <h2>Ibrahim Walid</h2>
+                </div>
+                <div class="member-box2">
+                    <img src="../../mohamed hassan.jpg" alt="Mohamed Hassan">
+                    <h2>Mohamed Hassan</h2>
+                </div>
+                <div class="member-box2">
+                    <img src="../../anas.jpg" alt="Anas Mamdouh">
+                    <h2>Anas Mamdouh</h2>
+                </div>
+                <div class="member-box3">
+                    <img src="../../unknown.jpg" alt="Mohab Abdulrahman">
+                    <h2>Mohab Abdulrahman</h2>
+                </div>
+            </section>
+        </section>
+        <div class="gradient-separator"></div>
+        <section class="components-container">
+            <div class="components-box">
+                <h2>Poster</h2>
+                <p>The poster presents a clear summary of our project, tackling water scarcity and tannery wastewater pollution. It highlights our treatment system combining sand filtration, electrocoagulation, biochar, and UV disinfection. Key outcomes, like 81.54% TDS and 99.08% turbidity reduction, are included, along with system design and materials. The poster offers a concise, engaging look at our solution’s effectiveness and its potential for sustainable land use.
+                </p>
+                <a href="./poster.pdf" class="btn" target="_blank">View</a>
+            </div>
+            <div class="components-box">
+                <h2>Portfolio</h2>
+                <p>The portfolio explores our project journey from identifying water scarcity and pollution problems to developing and testing our treatment system. It outlines our research, design process, and challenges like sensor interference and sludge management. The document reflects our efforts to create a sustainable, automated solution, showcasing how innovative engineering can support clean water access, land reclamation, and environmental restoration in industrial regions.                </p>
+                <a href="./portfolio.pdf" class="btn" target="_blank">View</a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Ibrahim Walid. All Rights Reserved.</p>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+    </script>
+</body>
+</html>        
